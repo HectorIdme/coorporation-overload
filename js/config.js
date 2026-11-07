@@ -9,8 +9,8 @@
 window.SITE_CONFIG = {
   gameplay: {
     youtube: "",
-    file: "assets/video/gameplay.mp4",
-    poster: "assets/video/gameplay_poster.webp"
+    file: "assets/video/gameplay_v3.mp4",
+    poster: "assets/video/gameplay_v3_poster.webp"
   },
   steamUrl: ""
 };
