@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Coorporation Overload · Party game de sabotaje en la oficina</title>
-<meta name="description" content="Haz tus tareas. Sabotea a tus compañeros. Sé el empleado del mes. Party game online para hasta 8 jugadores en PC. Beta próximamente en Steam.">
+<meta name="description" content="Haz tus tareas. Sabotea a tus compañeros. Sé el empleado de la semana. Party game online para hasta 8 jugadores en PC. Beta próximamente en Steam.">
 <meta name="theme-color" content="#131a2b">
 
 <!-- Vista previa al compartir el enlace (las URL de imagen tienen que ser absolutas) -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Coorporation Overload">
 <meta property="og:title" content="Coorporation Overload">
-<meta property="og:description" content="Haz tus tareas. Sabotea a tus compañeros. Sé el empleado del mes. Party game online para hasta 8 jugadores.">
+<meta property="og:description" content="Haz tus tareas. Sabotea a tus compañeros. Sé el empleado de la semana. Party game online para hasta 8 jugadores.">
 <meta property="og:url" content="https://hectoridme.github.io/coorporation-overload/">
 <meta property="og:image" content="https://hectoridme.github.io/coorporation-overload/assets/img/og_image.jpg">
 <meta property="og:image:width" content="1200">
@@ -40,8 +40,9 @@
 
     <nav class="tasknav" aria-label="Secciones">
       <a href="#puesto" data-i18n="nav.job">El puesto</a>
+      <a href="#manual" data-i18n="nav.manual">Cómo se juega</a>
       <a href="#gameplay" data-i18n="nav.video">Gameplay</a>
-      <a href="#caos" data-i18n="nav.chaos">El caos</a>
+      <a href="#dia" data-i18n="nav.day">Un día</a>
       <a href="#incidencias" data-i18n="nav.gallery">Capturas</a>
       <a href="#ficha" data-i18n="nav.sheet">Ficha</a>
     </nav>
@@ -60,8 +61,9 @@
     <ul>
       <li><a href="#inicio"><span class="ico">🏢</span><span data-i18n="nav.home">Inicio</span></a></li>
       <li><a href="#puesto"><span class="ico">📋</span><span data-i18n="nav.job">El puesto</span></a></li>
+      <li><a href="#manual"><span class="ico">📘</span><span data-i18n="nav.manual">Cómo se juega</span></a></li>
       <li><a href="#gameplay"><span class="ico">▶</span><span data-i18n="nav.video">Gameplay</span></a></li>
-      <li><a href="#caos"><span class="ico">⚡</span><span data-i18n="nav.chaos">El caos</span></a></li>
+      <li><a href="#dia"><span class="ico">🕘</span><span data-i18n="nav.day">Un día</span></a></li>
       <li><a href="#incidencias"><span class="ico">📸</span><span data-i18n="nav.gallery">Capturas</span></a></li>
       <li><a href="#ficha"><span class="ico">🪪</span><span data-i18n="nav.sheet">Ficha</span></a></li>
       <li><a href="#beta"><span class="ico">🚀</span><span data-i18n="nav.beta">Beta Proximamente</span></a></li>
@@ -90,7 +92,7 @@
     <p class="tagline">
       <span class="tagline__a" data-i18n="hero.t1">Haz tus tareas.</span>
       <span class="tagline__b" data-i18n="hero.t2">Sabotea a tus compañeros.</span>
-      <span class="tagline__c" data-i18n="hero.t3">Sé el <em>empleado del mes</em>.</span>
+      <span class="tagline__c" data-i18n="hero.t3">Sé el <em>empleado de la semana</em>.</span>
     </p>
 
     <div class="hero__cta">
@@ -117,7 +119,7 @@
   <div class="wrap">
     <header class="sec-head">
       <p class="memo-line memo-line--dark"><span data-i18n="job.memo">Memo Nº 0002</span> · <span data-i18n="job.from">De: Recursos Humanos</span></p>
-      <h2 data-i18n="job.title">Se busca: empleado del mes</h2>
+      <h2 data-i18n="job.title">Se busca: empleado de la semana</h2>
       <p class="lead" data-i18n="job.lead"><b>Coorporation Overload</b> es un party game online para hasta 8 jugadores en una oficina donde todos quieren el mismo puesto. Cumple tus tareas para sumar puntos… y asegúrate de que nadie más pueda cumplir las suyas.</p>
     </header>
 
@@ -127,8 +129,8 @@
         <div class="win__body">
           <span class="duty__n">1</span>
           <h3 data-i18n="job.d1.title">Haz tus tareas</h3>
-          <p data-i18n="job.d1.text">Llega, siéntate en tu PC y acepta las tareas del correo: reiniciar el router, traer café, calmar al PC Mordelón… Cada una completada suma puntos.</p>
-          <img src="assets/img/shots/04_tu_pc_tus_tareas_thumb.webp" alt="" loading="lazy" width="720" height="405">
+          <p data-i18n="job.d1.text">Llega, siéntate en tu PC y acepta las tareas del correo: alimentar a la planta carnívora, hacer callar al inodoro tenor, calmar al PC Mordelón… Cada una suma puntos, y cada día tienes que cumplir al menos 3.</p>
+          <img src="assets/img/shots/sec_p1_la_llegada_thumb.webp" srcset="assets/img/shots/sec_p1_la_llegada_thumb.webp 720w, assets/img/shots/sec_p1_la_llegada.webp 1440w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 40px), 300px" alt="" loading="lazy" width="720" height="405">
         </div>
       </article>
 
@@ -138,17 +140,27 @@
           <span class="duty__n">2</span>
           <h3 data-i18n="job.d2.title">Sabotea a tus compañeros</h3>
           <p data-i18n="job.d2.text">Café al PC ajeno, tazas por los aires, puñetazos por la espalda. Tus tareas te dan la excusa perfecta para pasar por su mesa.</p>
-          <img src="assets/img/shots/02_cortocircuito_thumb.webp" alt="" loading="lazy" width="720" height="405">
+          <img src="assets/img/shots/sec_p2_sabotaje_thumb.webp" srcset="assets/img/shots/sec_p2_sabotaje_thumb.webp 720w, assets/img/shots/sec_p2_sabotaje.webp 1440w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 40px), 300px" alt="" loading="lazy" width="720" height="405">
         </div>
       </article>
 
       <article class="win duty">
-        <div class="win__bar win__bar--gold"><span data-i18n="job.d3.bar">Felicitación de la dirección</span><i class="win__btns" aria-hidden="true"></i></div>
+        <div class="win__bar win__bar--teal"><span data-i18n="job.d3.bar">Incidencia: la oficina tiene vida</span><i class="win__btns" aria-hidden="true"></i></div>
         <div class="win__body">
           <span class="duty__n">3</span>
-          <h3 data-i18n="job.d3.title">Sé el empleado del mes</h3>
-          <p data-i18n="job.d3.text">Quien termine la jornada con más puntos se queda con el puesto (y con la foto en la pared). El resto, a recursos humanos.</p>
-          <img src="assets/img/shots/07_fiesta_en_horario_laboral_thumb.webp" alt="" loading="lazy" width="720" height="405">
+          <h3 data-i18n="job.d3.title">Sobrevive a la oficina</h3>
+          <p data-i18n="job.d3.text">Compañeros que se vengan, un PC que muerde, una planta con hambre y un lingote de oro rodando por ahí. Aquí nada se está quieto.</p>
+          <img src="assets/img/shots/sec_p3_sobrevive_thumb.webp" srcset="assets/img/shots/sec_p3_sobrevive_thumb.webp 720w, assets/img/shots/sec_p3_sobrevive.webp 1440w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 40px), 300px" alt="" loading="lazy" width="720" height="405">
+        </div>
+      </article>
+
+      <article class="win duty">
+        <div class="win__bar win__bar--gold"><span data-i18n="job.d4.bar">Felicitación de la dirección</span><i class="win__btns" aria-hidden="true"></i></div>
+        <div class="win__body">
+          <span class="duty__n">4</span>
+          <h3 data-i18n="job.d4.title">Sé el empleado de la semana</h3>
+          <p data-i18n="job.d4.text">El viernes, quien haya sumado más puntos en toda la semana sube al podio con corona y capa. El resto, a recursos humanos.</p>
+          <img src="assets/img/shots/sec_p4_empleado_del_mes_thumb.webp" srcset="assets/img/shots/sec_p4_empleado_del_mes_thumb.webp 720w, assets/img/shots/sec_p4_empleado_del_mes.webp 1440w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 40px), 300px" alt="" loading="lazy" width="720" height="405">
         </div>
       </article>
     </div>
@@ -159,9 +171,65 @@
         <li data-i18n="req.1">Buena puntería con tazas de café</li>
         <li data-i18n="req.2">Cero remordimientos</li>
         <li data-i18n="req.3">Tolerancia a inodoros que cantan ópera</li>
+        <li data-i18n="req.5">Saber correr sin derramar el café (o derramarlo donde toca)</li>
+        <li data-i18n="req.6">No acercarse demasiado a la planta de la zona de descanso</li>
         <li data-i18n="req.4">De 1 a 7 compañeros dispuestos a perder tu amistad</li>
       </ul>
     </aside>
+  </div>
+</section>
+
+<!-- ============ MANUAL (mecanicas) ============ -->
+<section class="paper paper--manual" id="manual">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="memo-line memo-line--dark"><span data-i18n="man.memo">Memo Nº 0002-B</span> · <span data-i18n="man.from">De: Formación de nuevos empleados</span></p>
+      <h2 data-i18n="man.title">Manual del empleado</h2>
+      <p class="lead" data-i18n="man.lead">Todo lo que necesitas para sobrevivir a tu primera semana en Coorporation S.A. Léelo entero: tus compañeros no lo harán.</p>
+    </header>
+
+    <ol class="manual">
+      <li class="manual__item">
+        <span class="manual__ico" aria-hidden="true">🕘</span>
+        <h3 data-i18n="man.1.t">Una semana de oficina</h3>
+        <p data-i18n="man.1.x">De lunes a viernes. Cada mañana tienes 50 segundos para llegar a tu PC y elegir tus tareas. Luego empieza la jornada, llega la última hora… y al cierre se pasa lista.</p>
+      </li>
+      <li class="manual__item">
+        <span class="manual__ico" aria-hidden="true">📧</span>
+        <h3 data-i18n="man.2.t">Las tareas llegan al correo</h3>
+        <p data-i18n="man.2.x">Acepta las que quieras: regar las plantas, reiniciar el router, llevarle café al jefe. Cada una completada suma puntos. La cuota es de 3 al día: por cada una que te falte al cierre, −100.</p>
+      </li>
+      <li class="manual__item">
+        <span class="manual__ico" aria-hidden="true">☕</span>
+        <h3 data-i18n="man.3.t">Sabotea sin que se note</h3>
+        <p data-i18n="man.3.x">Un café sobre el PC de otro y… pantalla azul. Ya no puede trabajar hasta reiniciarlo. Y si te ven cerca, tranquilo: tenías una tarea justo ahí.</p>
+      </li>
+      <li class="manual__item">
+        <span class="manual__ico" aria-hidden="true">🖐️</span>
+        <h3 data-i18n="man.4.t">Todo se puede lanzar</h3>
+        <p data-i18n="man.4.x">Tazas, bolas de papel, la fregona. Mantén pulsado para cargar el tiro y suelta para lanzar. ¿Con las manos vacías? Un buen puñetazo también funciona.</p>
+      </li>
+      <li class="manual__item">
+        <span class="manual__ico" aria-hidden="true">😤</span>
+        <h3 data-i18n="man.5.t">Compañeros con memoria</h3>
+        <p data-i18n="man.5.x">La oficina está llena de compañeros con su rutina: su café, su PC, su planta. Si les tocas las narices, se acuerdan de ti… y te devuelven el golpe.</p>
+      </li>
+      <li class="manual__item">
+        <span class="manual__ico" aria-hidden="true">🦷</span>
+        <h3 data-i18n="man.6.t">Objetos con vida propia</h3>
+        <p data-i18n="man.6.x">Un PC con patas que muerde, un inodoro que canta ópera, una planta carnívora que esconde un código en sus antenas. Te los encontrarás por tus tareas… o te encontrarán ellos.</p>
+      </li>
+      <li class="manual__item">
+        <span class="manual__ico" aria-hidden="true">✨</span>
+        <h3 data-i18n="man.7.t">Nada está en su sitio</h3>
+        <p data-i18n="man.7.x">Las manchas cambian de lugar cada mañana y, si hay suerte, aparece un lingote de oro. Lánzalo bien: deja a cualquiera viendo pajaritos.</p>
+      </li>
+      <li class="manual__item">
+        <span class="manual__ico" aria-hidden="true">🏆</span>
+        <h3 data-i18n="man.8.t">El viernes, el podio</h3>
+        <p data-i18n="man.8.x">Los puntos se acumulan toda la semana. El que más sume es el empleado de la semana: podio, corona y capa. Y para celebrarlo, pelea libre con armas de juguete: sartén, piruleta y alguna bomba.</p>
+      </li>
+    </ol>
   </div>
 </section>
 
@@ -190,32 +258,57 @@
   </div>
 </section>
 
-<!-- ============ EL CAOS (pantallazo azul) ============ -->
-<section class="bsod" id="caos">
+<!-- ============ UN DIA EN LA OFICINA (tira) ============ -->
+<section class="strip" id="dia">
   <div class="wrap">
-    <p class="bsod__face" aria-hidden="true">:(</p>
-    <h2 data-i18n="chaos.title">Tu PC ha sufrido un cortocircuito.</h2>
-    <p class="bsod__lead" data-i18n="chaos.lead">En esta oficina los objetos tienen carácter. Se mojan, se rompen, se averían… y algunos cobran vida. Combínalos y mira qué pasa:</p>
+    <header class="sec-head sec-head--light">
+      <p class="memo-line"><span data-i18n="day.memo">Memo Nº 0003-B</span> · <span data-i18n="day.from">Horario de oficina</span></p>
+      <h2 data-i18n="day.title">Un día en Coorporation S.A.</h2>
+      <p class="lead" data-i18n="day.lead">Así es una jornada cualquiera. Repítela de lunes a viernes y el viernes se decide quién se queda el puesto.</p>
+    </header>
 
-    <ol class="recipes">
-      <li class="recipe">
-        <img src="assets/img/shots/02_cortocircuito_thumb.webp" alt="" loading="lazy" width="720" height="405">
-        <p class="recipe__eq"><span data-i18n="chaos.r1a">Café</span> <i>+</i> <span data-i18n="chaos.r1b">PC</span> <i>=</i> <b data-i18n="chaos.r1c">Cortocircuito</b></p>
-        <p data-i18n="chaos.r1t">Pantalla azul, humo y chispas. Su dueño sale volando de la silla y nadie lo usa hasta reiniciarlo.</p>
+    <ol class="panels">
+      <li class="panel panel--arrival">
+        <figure>
+          <img src="assets/img/shots/sec_t1_llegada_thumb.webp" srcset="assets/img/shots/sec_t1_llegada_thumb.webp 720w, assets/img/shots/sec_t1_llegada.webp 1440w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 40px), 380px" alt="Empleados corriendo por la oficina hacia sus PC; el reloj marca la llegada" data-i18n-alt="day.a1" loading="lazy" width="720" height="405">
+          <span class="panel__phase"><b>1</b><span data-i18n="day.k1">Lunes · Llegada</span></span>
+        </figure>
+        <h3 class="panel__title" data-i18n="day.h1">¡A fichar!</h3>
+        <p data-i18n="day.t1">Tienes 50 segundos para llegar a tu PC y elegir tus tareas del correo. Los demás también corren.</p>
       </li>
-      <li class="recipe">
-        <img src="assets/img/shots/06_taza_voladora_thumb.webp" alt="" loading="lazy" width="720" height="405">
-        <p class="recipe__eq"><span data-i18n="chaos.r2a">Taza</span> <i>+</i> <span data-i18n="chaos.r2b">Cabeza</span> <i>=</i> <b data-i18n="chaos.r2c">Al suelo</b></p>
-        <p data-i18n="chaos.r2t">Todo lo que cabe en la mano se puede lanzar. Carga el tiro, apunta y despídete de la taza.</p>
+      <li class="panel panel--workday">
+        <figure>
+          <img src="assets/img/shots/sec_t2_jornada_thumb.webp" srcset="assets/img/shots/sec_t2_jornada_thumb.webp 720w, assets/img/shots/sec_t2_jornada.webp 1440w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 40px), 380px" alt="Vista en primera persona con la fregona en la mano y una mancha marcada en el suelo" data-i18n-alt="day.a2" loading="lazy" width="720" height="405">
+          <span class="panel__phase"><b>2</b><span data-i18n="day.k2">Jornada</span></span>
+        </figure>
+        <h3 class="panel__title" data-i18n="day.h2">Manos a la obra</h3>
+        <p data-i18n="day.t2">Cada tarea te manda a una punta de la oficina: fregar el pasillo, llevarle café al jefe, reiniciar el router. Unas tienen plazo; otras, hasta el cierre. Y por el camino… pasas justo al lado del PC de tu rival.</p>
       </li>
-      <li class="recipe">
-        <img src="assets/img/shots/03_pc_mordelon_thumb.webp" alt="" loading="lazy" width="720" height="405">
-        <p class="recipe__eq"><span data-i18n="chaos.r3a">Tarea</span> <i>+</i> <span data-i18n="chaos.r3b">PC viejo</span> <i>=</i> <b data-i18n="chaos.r3c">PC Mordelón</b></p>
-        <p data-i18n="chaos.r3t">Algunos objetos despiertan cuando alguien tiene su tarea: el PC que muerde, el archivador sin fondo, el inodoro tenor.</p>
+      <li class="panel panel--lasthour">
+        <figure>
+          <img src="assets/img/shots/sec_t3_ultima_hora_thumb.webp" srcset="assets/img/shots/sec_t3_ultima_hora_thumb.webp 720w, assets/img/shots/sec_t3_ultima_hora.webp 1440w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 40px), 380px" alt="La oficina en la última hora, con un PC en pantalla azul y la lista de tareas a medias" data-i18n-alt="day.a3" loading="lazy" width="720" height="405">
+          <span class="panel__phase"><b>3</b><span data-i18n="day.k3">Última hora</span></span>
+        </figure>
+        <h3 class="panel__title" data-i18n="day.h3">¡Que no se acaba!</h3>
+        <p data-i18n="day.t3">El reloj aprieta, alguien tiene el PC en pantalla azul y te faltan tareas. Ahora o nunca.</p>
+      </li>
+      <li class="panel panel--closing">
+        <figure>
+          <img src="assets/img/shots/sec_t4_cierre_thumb.webp" srcset="assets/img/shots/sec_t4_cierre_thumb.webp 720w, assets/img/shots/sec_t4_cierre.webp 1440w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 40px), 600px" alt="El cierre del día: cuota de 2 de 3 tareas y los puntos que quedan" data-i18n-alt="day.a4" loading="lazy" width="720" height="405">
+          <span class="panel__phase"><b>4</b><span data-i18n="day.k4">Cierre</span></span>
+        </figure>
+        <h3 class="panel__title" data-i18n="day.h4">Se pasa lista</h3>
+        <p data-i18n="day.t4">La cuota es de 3 tareas al día. ¿Te faltó una? −100 puntos. Mañana, vuelta a empezar.</p>
+      </li>
+      <li class="panel panel--friday">
+        <figure>
+          <img src="assets/img/shots/sec_t5_podio_thumb.webp" srcset="assets/img/shots/sec_t5_podio_thumb.webp 720w, assets/img/shots/sec_t5_podio.webp 1440w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(100vw - 60px), 600px" alt="El podio del viernes: el ganador con corona y capa mientras los demás se pelean delante" data-i18n-alt="day.a5" loading="lazy" width="720" height="405">
+          <span class="panel__phase"><b>5</b><span data-i18n="day.k5">Viernes · Fin de semana</span></span>
+        </figure>
+        <h3 class="panel__title" data-i18n="day.h5">¡Corona, capa… y bombas!</h3>
+        <p data-i18n="day.t5">Tras cinco días, el que más puntos sume sube al podio con corona y capa. Y para celebrarlo: pelea libre con bates, sartenes y alguna bomba.</p>
       </li>
     </ol>
-
-    <p class="bsod__foot"><span data-i18n="chaos.foot">Pulsa cualquier tecla para seguir saboteando</span><span class="caret" aria-hidden="true">_</span></p>
   </div>
 </section>
 
@@ -232,15 +325,15 @@
       <li class="ticket ticket--wide">
         <a href="assets/img/shots/01_caos_en_la_oficina.webp">
           <span class="ticket__head"><b>INC-0001</b><span class="prio prio--red" data-i18n="gal.p1">Prioridad: crítica</span></span>
-          <img src="assets/img/shots/01_caos_en_la_oficina_thumb.webp" alt="Un empleado golpea a otro por la espalda mientras un PC echa humo al fondo" data-i18n-alt="gal.a1" loading="lazy" width="720" height="405">
+          <img src="assets/img/shots/01_caos_en_la_oficina.webp" srcset="assets/img/shots/01_caos_en_la_oficina.webp 1600w, assets/img/shots/01_caos_en_la_oficina_2400.webp 2400w" sizes="(max-width: 1020px) calc(100vw - 32px), 780px" alt="La oficina llena de empleados mientras alguien lanza un café y un PC echa humo" data-i18n-alt="gal.a1" loading="lazy" width="720" height="405">
           <span class="ticket__title" data-i18n="gal.t1">Caos en la oficina</span>
-          <span class="ticket__text" data-i18n="gal.x1">Un golpe por la espalda y un PC humeando al fondo. Un martes cualquiera.</span>
+          <span class="ticket__text" data-i18n="gal.x1">Un café en pleno vuelo, un PC que ya echa humo y toda la oficina a su alrededor. Un martes cualquiera.</span>
         </a>
       </li>
       <li class="ticket">
         <a href="assets/img/shots/02_cortocircuito.webp">
           <span class="ticket__head"><b>INC-0002</b><span class="prio prio--red" data-i18n="gal.p2">Prioridad: alta</span></span>
-          <img src="assets/img/shots/02_cortocircuito_thumb.webp" alt="Un PC con pantalla azul tras un cortocircuito" data-i18n-alt="gal.a2" loading="lazy" width="720" height="405">
+          <img src="assets/img/shots/02_cortocircuito_thumb.webp" srcset="assets/img/shots/02_cortocircuito_thumb.webp 720w, assets/img/shots/02_cortocircuito.webp 1600w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 32px), 380px" alt="Un PC con pantalla azul tras un cortocircuito; su dueño salta de la silla" data-i18n-alt="gal.a2" loading="lazy" width="720" height="405">
           <span class="ticket__title" data-i18n="gal.t2">Cortocircuito</span>
           <span class="ticket__text" data-i18n="gal.x2">Alguien derramó café sobre el PC de un compañero. Por accidente, claro.</span>
         </a>
@@ -248,47 +341,47 @@
       <li class="ticket">
         <a href="assets/img/shots/03_pc_mordelon.webp">
           <span class="ticket__head"><b>INC-0003</b><span class="prio prio--orange" data-i18n="gal.p3">Prioridad: muerde</span></span>
-          <img src="assets/img/shots/03_pc_mordelon_thumb.webp" alt="Un ordenador viejo con dientes asusta a un empleado" data-i18n-alt="gal.a3" loading="lazy" width="720" height="405">
+          <img src="assets/img/shots/03_pc_mordelon_thumb.webp" srcset="assets/img/shots/03_pc_mordelon_thumb.webp 720w, assets/img/shots/03_pc_mordelon.webp 1600w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 32px), 380px" alt="Un ordenador con patas enseña los dientes a un empleado que cae al suelo" data-i18n-alt="gal.a3" loading="lazy" width="720" height="405">
           <span class="ticket__title" data-i18n="gal.t3">El PC Mordelón</span>
-          <span class="ticket__text" data-i18n="gal.x3">Este ordenador muerde. Hay una tarea para calmarlo.</span>
+          <span class="ticket__text" data-i18n="gal.x3">Anda, caza y muerde. Al menos deja tirita.</span>
         </a>
       </li>
       <li class="ticket">
         <a href="assets/img/shots/04_tu_pc_tus_tareas.webp">
           <span class="ticket__head"><b>INC-0004</b><span class="prio prio--blue" data-i18n="gal.p4">Prioridad: normal</span></span>
-          <img src="assets/img/shots/04_tu_pc_tus_tareas_thumb.webp" alt="El correo del PC con la agenda de tareas del día" data-i18n-alt="gal.a4" loading="lazy" width="720" height="405">
+          <img src="assets/img/shots/04_tu_pc_tus_tareas_thumb.webp" srcset="assets/img/shots/04_tu_pc_tus_tareas_thumb.webp 720w, assets/img/shots/04_tu_pc_tus_tareas.webp 1600w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 32px), 380px" alt="Un empleado en su PC con el correo y la lista de tareas del día" data-i18n-alt="gal.a4" loading="lazy" width="720" height="405">
           <span class="ticket__title" data-i18n="gal.t4">Tu PC, tus tareas</span>
           <span class="ticket__text" data-i18n="gal.x4">Las tareas llegan al correo. Acepta, cumple y suma puntos.</span>
         </a>
       </li>
       <li class="ticket">
-        <a href="assets/img/shots/05_archivador_sin_fondo.webp">
-          <span class="ticket__head"><b>INC-0005</b><span class="prio prio--orange" data-i18n="gal.p5">Prioridad: ???</span></span>
-          <img src="assets/img/shots/05_archivador_sin_fondo_thumb.webp" alt="Un empleado frente a un archivador del que salen papeles volando" data-i18n-alt="gal.a5" loading="lazy" width="720" height="405">
-          <span class="ticket__title" data-i18n="gal.t5">El archivador sin fondo</span>
-          <span class="ticket__text" data-i18n="gal.x5">Tres cajones, solo uno correcto. Si fallas, los papeles vuelan.</span>
+        <a href="assets/img/shots/05_planta_carnivora.webp">
+          <span class="ticket__head"><b>INC-0005</b><span class="prio prio--orange" data-i18n="gal.p5">Prioridad: tiene hambre</span></span>
+          <img src="assets/img/shots/05_planta_carnivora_thumb.webp" srcset="assets/img/shots/05_planta_carnivora_thumb.webp 720w, assets/img/shots/05_planta_carnivora.webp 1600w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 32px), 380px" alt="Una planta carnívora de tres cabezas abre la boca frente a un empleado asustado" data-i18n-alt="gal.a5" loading="lazy" width="720" height="405">
+          <span class="ticket__title" data-i18n="gal.t5">La planta carnívora</span>
+          <span class="ticket__text" data-i18n="gal.x5">Tres cabezas, un código en las antenas y mucho apetito. Dale de comer antes de que elija ella.</span>
         </a>
       </li>
       <li class="ticket">
         <a href="assets/img/shots/06_taza_voladora.webp">
           <span class="ticket__head"><b>INC-0006</b><span class="prio prio--red" data-i18n="gal.p6">Prioridad: alta</span></span>
-          <img src="assets/img/shots/06_taza_voladora_thumb.webp" alt="Una taza vuela hacia la cabeza de un empleado en la cafetería" data-i18n-alt="gal.a6" loading="lazy" width="720" height="405">
+          <img src="assets/img/shots/06_taza_voladora_thumb.webp" srcset="assets/img/shots/06_taza_voladora_thumb.webp 720w, assets/img/shots/06_taza_voladora.webp 1600w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 32px), 380px" alt="Un empleado lanza una taza que estalla en la cabeza de otro en la cafetería" data-i18n-alt="gal.a6" loading="lazy" width="720" height="405">
           <span class="ticket__title" data-i18n="gal.t6">Taza voladora</span>
           <span class="ticket__text" data-i18n="gal.x6">Todo lo que cabe en la mano se puede lanzar.</span>
         </a>
       </li>
       <li class="ticket">
-        <a href="assets/img/shots/07_fiesta_en_horario_laboral.webp">
-          <span class="ticket__head"><b>INC-0007</b><span class="prio prio--green" data-i18n="gal.p7">Prioridad: ninguna</span></span>
-          <img src="assets/img/shots/07_fiesta_en_horario_laboral_thumb.webp" alt="Tres empleados bailan en la sala de descanso" data-i18n-alt="gal.a7" loading="lazy" width="720" height="405">
-          <span class="ticket__title" data-i18n="gal.t7">Fiesta en horario laboral</span>
-          <span class="ticket__text" data-i18n="gal.x7">Bailar también cuenta como pausa activa.</span>
+        <a href="assets/img/shots/07_inodoro_tenor.webp">
+          <span class="ticket__head"><b>INC-0007</b><span class="prio prio--green" data-i18n="gal.p7">Prioridad: do de pecho</span></span>
+          <img src="assets/img/shots/07_inodoro_tenor_thumb.webp" srcset="assets/img/shots/07_inodoro_tenor_thumb.webp 720w, assets/img/shots/07_inodoro_tenor.webp 1600w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 32px), 380px" alt="Un inodoro con bigote y pajarita canta rodeado de notas musicales" data-i18n-alt="gal.a7" loading="lazy" width="720" height="405">
+          <span class="ticket__title" data-i18n="gal.t7">El inodoro tenor</span>
+          <span class="ticket__text" data-i18n="gal.x7">Canta ópera a pleno pulmón. Desatáscalo… si te atreves.</span>
         </a>
       </li>
       <li class="ticket">
         <a href="assets/img/shots/08_el_menu_es_la_oficina.webp">
           <span class="ticket__head"><b>INC-0008</b><span class="prio prio--blue" data-i18n="gal.p8">Prioridad: informativa</span></span>
-          <img src="assets/img/shots/08_el_menu_es_la_oficina_thumb.webp" alt="El menú principal: una oficina en miniatura con fotocopiadora y monitores" data-i18n-alt="gal.a8" loading="lazy" width="720" height="405">
+          <img src="assets/img/shots/08_el_menu_es_la_oficina_thumb.webp" srcset="assets/img/shots/08_el_menu_es_la_oficina_thumb.webp 720w, assets/img/shots/08_el_menu_es_la_oficina.webp 1600w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 32px), 380px" alt="El menú principal: una oficina en miniatura con fotocopiadora y monitores" data-i18n-alt="gal.a8" loading="lazy" width="720" height="405">
           <span class="ticket__title" data-i18n="gal.t8">El menú es la oficina</span>
           <span class="ticket__text" data-i18n="gal.x8">Crea una sala desde el monitor o únete con un código en la fotocopiadora.</span>
         </a>
@@ -296,9 +389,25 @@
       <li class="ticket">
         <a href="assets/img/shots/09_lobby_sala_llena.webp">
           <span class="ticket__head"><b>INC-0009</b><span class="prio prio--green" data-i18n="gal.p9">Estado: sala llena</span></span>
-          <img src="assets/img/shots/09_lobby_sala_llena_thumb.webp" alt="La sala de espera con los puestos de seis jugadores" data-i18n-alt="gal.a9" loading="lazy" width="720" height="405">
+          <img src="assets/img/shots/09_lobby_sala_llena_thumb.webp" srcset="assets/img/shots/09_lobby_sala_llena_thumb.webp 720w, assets/img/shots/09_lobby_sala_llena.webp 1600w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 32px), 380px" alt="La sala de espera con los nombres de seis jugadores en sus puestos" data-i18n-alt="gal.a9" loading="lazy" width="720" height="405">
           <span class="ticket__title" data-i18n="gal.t9">Sala llena</span>
           <span class="ticket__text" data-i18n="gal.x9">Reúne a tu oficina por internet y elige departamento: Soporte TI o Legal y RR. HH.</span>
+        </a>
+      </li>
+      <li class="ticket">
+        <a href="assets/img/shots/10_ko_de_oro.webp">
+          <span class="ticket__head"><b>INC-0010</b><span class="prio prio--orange" data-i18n="gal.p10">Prioridad: brilla</span></span>
+          <img src="assets/img/shots/10_ko_de_oro_thumb.webp" srcset="assets/img/shots/10_ko_de_oro_thumb.webp 720w, assets/img/shots/10_ko_de_oro.webp 1600w" sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1020px) calc(50vw - 32px), 380px" alt="Un empleado K.O. en el suelo con pajaritos, junto a un lingote de oro" data-i18n-alt="gal.a10" loading="lazy" width="720" height="405">
+          <span class="ticket__title" data-i18n="gal.t10">K.O. de oro</span>
+          <span class="ticket__text" data-i18n="gal.x10">Un lingote de oro aparece al azar. Quien lo recibe en la cabeza ve pajaritos.</span>
+        </a>
+      </li>
+      <li class="ticket ticket--long">
+        <a href="assets/img/shots/11_empleado_del_mes.webp">
+          <span class="ticket__head"><b>INC-0011</b><span class="prio prio--green" data-i18n="gal.p11">Estado: ganador</span></span>
+          <img src="assets/img/shots/11_empleado_del_mes.webp" srcset="assets/img/shots/11_empleado_del_mes.webp 1600w, assets/img/shots/11_empleado_del_mes_2400.webp 2400w" sizes="(max-width: 1020px) calc(100vw - 32px), 780px" alt="Tres empleados en un podio con corona, capa y medallas mientras otros celebran" data-i18n-alt="gal.a11" loading="lazy" width="720" height="405">
+          <span class="ticket__title" data-i18n="gal.t11">Empleado de la semana</span>
+          <span class="ticket__text" data-i18n="gal.x11">El viernes, el podio: corona y capa para el empleado de la semana, gorro de fiesta para el tercero.</span>
         </a>
       </li>
     </ul>

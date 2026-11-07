@@ -234,6 +234,7 @@ p { margin: 0; }
 }
 .win__bar--alert { background: linear-gradient(#ff8a45, #e8541a); }
 .win__bar--gold { background: linear-gradient(#ffd34d, #f0a90e); color: var(--ink); }
+.win__bar--teal { background: linear-gradient(#3fd0b4, #1a9a83); }
 .win__btns { display: flex; gap: 4px; flex: none; }
 .win__btns::before, .win__btns::after { content: ""; width: 18px; height: 18px; border: 2px solid var(--ink); border-radius: 4px; background: var(--white); }
 .win__btns::after { background: var(--red) linear-gradient(45deg, transparent 44%, var(--white) 44% 56%, transparent 56%), linear-gradient(-45deg, transparent 44%, var(--white) 44% 56%, transparent 56%); background-blend-mode: normal; }
@@ -250,7 +251,7 @@ p { margin: 0; }
 }
 .paper::before { content: ""; position: absolute; top: 0; bottom: 0; left: max(10px, calc((100% - 1180px) / 2 - 34px)); width: 2px; background: rgba(232, 65, 75, .3); }
 
-.duties { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.duties { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .duty .win__body { position: relative; padding: 26px 22px 22px; display: flex; flex-direction: column; gap: 12px; height: calc(100% - 38px); }
 .duty__n {
   position: absolute; top: -6px; right: 14px;
@@ -263,23 +264,50 @@ p { margin: 0; }
 .duty img { border: 2px solid var(--ink); border-radius: 6px; margin-top: 6px; aspect-ratio: 16 / 9; object-fit: cover; }
 .duty:nth-child(1) { transform: rotate(-1deg); }
 .duty:nth-child(2) { transform: translateY(18px) rotate(.8deg); }
-.duty:nth-child(3) { transform: rotate(-.6deg); }
+.duty:nth-child(3) { transform: translateY(10px) rotate(-.6deg); }
+.duty:nth-child(4) { transform: rotate(.7deg); }
 
 .postit {
   position: relative;
-  width: min(440px, 100%);
-  margin: 70px 0 0 auto;
+  width: min(980px, 100%);
+  margin: 70px auto 0;
   padding: 28px 30px 26px;
   background: var(--yellow-2);
   box-shadow: 0 18px 24px -14px rgba(0, 0, 0, .45);
-  transform: rotate(2deg);
+  transform: rotate(-.8deg);
 }
 .postit::before { content: ""; position: absolute; top: -14px; left: 50%; width: 120px; height: 30px; translate: -50% 0; background: rgba(255, 255, 255, .55); border: 1px solid rgba(0, 0, 0, .06); transform: rotate(-3deg); }
 .postit h3 { margin-bottom: 12px; }
-.postit ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.postit ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 26px; }
 .postit li { position: relative; padding-left: 34px; font-weight: 500; }
 .postit li::before { content: ""; position: absolute; left: 0; top: 2px; width: 20px; height: 20px; border: 2px solid var(--ink); background: var(--white); border-radius: 3px; }
 .postit li::after { content: "✓"; position: absolute; left: 3px; top: -6px; font: 700 1.5rem/1 var(--body); color: var(--red); }
+
+/* ---------- Manual del empleado (mecanicas) ---------- */
+.paper--manual { border-top: 3px dashed rgba(19, 26, 43, .25); padding-top: 90px; }
+.manual { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; counter-reset: man; }
+.manual__item {
+  position: relative;
+  counter-increment: man;
+  padding: 24px 20px 22px;
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.manual__item:nth-child(odd) { transform: rotate(-.6deg); }
+.manual__item:nth-child(even) { transform: rotate(.5deg); }
+.manual__item::after {
+  content: counter(man, decimal-leading-zero);
+  position: absolute; top: 12px; right: 14px;
+  font: 600 .8rem/1 var(--mono); color: rgba(19, 26, 43, .45);
+}
+.manual__ico { display: inline-grid; place-items: center; width: 52px; height: 52px; margin-bottom: 12px; font-size: 1.7rem; background: var(--yellow); border: 3px solid var(--ink); border-radius: 50%; }
+.manual__item h3 { margin-bottom: 8px; font-size: 1.15rem; }
+.manual__item p { margin: 0; font-size: .97rem; color: #3b4258; }
+
+/* Captura doble al final de la galeria (cierra la cuadricula de tres) */
+.ticket--long { grid-column: span 2; }
 
 /* ---------- Gameplay ---------- */
 .desk {
@@ -312,14 +340,47 @@ p { margin: 0; }
 .bsod__face { font: 400 clamp(5rem, 14vw, 9rem)/1 var(--body); margin-bottom: 12px; }
 .bsod h2 { font-family: var(--body); font-weight: 500; font-size: clamp(1.8rem, 4.2vw, 3rem); line-height: 1.15; letter-spacing: 0; max-width: 20ch; }
 .bsod__lead { margin: 18px 0 50px; font-size: 1.05rem; max-width: 62ch; color: rgba(255, 255, 255, .88); }
-.recipes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
-.recipe { border: 2px solid rgba(255, 255, 255, .55); border-radius: 8px; padding: 14px 14px 18px; background: rgba(255, 255, 255, .05); }
-.recipe img { border-radius: 4px; margin-bottom: 16px; aspect-ratio: 16 / 9; object-fit: cover; }
-.recipe p { font-size: .95rem; color: rgba(255, 255, 255, .86); }
-.recipe__eq { font: 400 1.75rem/1.1 var(--display) !important; letter-spacing: .04em; color: var(--white) !important; margin-bottom: 10px; }
-.recipe__eq i { font-style: normal; color: var(--yellow); margin: 0 4px; }
-.recipe__eq b { font-weight: 400; background: var(--white); color: var(--bsod); padding: 1px 8px 0; white-space: nowrap; }
-.bsod__foot { margin-top: 50px; font-size: .95rem; }
+/* ---------- Un dia en la oficina (tira de vinetas) ---------- */
+.strip {
+  padding: 100px 0 110px; color: var(--white);
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, .1) 1.6px, transparent 1.7px) 0 0 / 18px 18px,
+    var(--bsod);
+}
+.panels { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 26px; counter-reset: panel; }
+.panel {
+  grid-column: span 2; display: flex; flex-direction: column;
+  background: var(--paper); color: var(--ink);
+  border: 3px solid var(--ink); border-radius: 6px; box-shadow: var(--shadow);
+  padding: 12px 12px 18px;
+}
+.panel:nth-child(4), .panel:nth-child(5) { grid-column: span 3; }
+.panel:nth-child(odd) { rotate: -.6deg; }
+.panel:nth-child(even) { rotate: .5deg; }
+.panel figure { position: relative; margin: 0 0 26px; }
+.panel img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 3px solid var(--ink); border-radius: 3px; }
+.panel__phase {
+  position: absolute; left: -8px; bottom: -14px;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 12px 4px 5px;
+  font: 400 1.05rem/1 var(--display); letter-spacing: .06em; text-transform: uppercase;
+  background: var(--navy); color: var(--white);
+  border: 3px solid var(--yellow); border-radius: 999px; box-shadow: var(--shadow-sm);
+}
+.panel__phase b {
+  display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%;
+  font-weight: 400; background: var(--yellow); color: var(--ink);
+}
+.panel--arrival .panel__phase span { color: #5fe3cf; }
+.panel--workday .panel__phase span { color: var(--yellow); }
+.panel--lasthour .panel__phase span { color: #ff9a5c; }
+.panel--closing .panel__phase span { color: #ff6b73; }
+.panel--friday { background: var(--yellow); }
+.panel--friday .panel__phase { border-color: var(--white); }
+.panel--friday .panel__phase span { color: var(--yellow); }
+.panel__title { margin: 0 4px 6px; font: 400 1.9rem/1.05 var(--display); letter-spacing: .03em; }
+.panel p { margin: 0 4px; font-size: 1rem; line-height: 1.5; }
+.panel--friday .panel__title { font-size: 2.2rem; }
 .caret { animation: blink 1s steps(1) infinite; }
 
 /* ---------- Capturas (tickets) ---------- */
@@ -471,10 +532,18 @@ body.is-crashing { animation: shake .35s; }
 /* ---------- Responsive ---------- */
 @media (max-width: 1020px) {
   .tasknav { display: none; }
-  .duties, .recipes { grid-template-columns: 1fr 1fr; }
+  .duties { grid-template-columns: 1fr 1fr; }
+  .panels { grid-template-columns: 1fr 1fr; gap: 22px; }
+  .panel:nth-child(n) { grid-column: auto; }
+  .panel:nth-child(5) { grid-column: span 2; }
   .duty:nth-child(n) { transform: none; }
+  .duty:nth-child(n) { transform: none; }
+  .postit ul { grid-template-columns: 1fr 1fr; }
   .tickets { grid-template-columns: 1fr 1fr; }
   .ticket--wide { grid-row: auto; }
+  /* A 2 columnas la 11 va sencilla: con la 10 al lado la ultima fila queda completa */
+  .ticket--long { grid-column: auto; }
+  .manual { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 760px) {
   body { font-size: 16px; }
@@ -491,13 +560,17 @@ body.is-crashing { animation: shake .35s; }
   .mug { width: 64px; height: 64px; top: 112px; bottom: auto; right: 22px; padding: 7px; }
   .mug__tip { display: none; }
   .hero__down { display: none; }
-  .paper, .desk, .cork, .bsod { padding: 70px 0 80px; }
+  .paper, .desk, .cork, .bsod, .strip { padding: 70px 0 80px; }
   .paper::before { display: none; }
   .sec-head { margin-bottom: 32px; }
-  .duties, .recipes, .tickets, .board { grid-template-columns: 1fr; }
-  .ticket--wide { grid-column: auto; }
+  .duties, .tickets, .board, .panels { grid-template-columns: 1fr; }
+  .panel:nth-child(n) { grid-column: auto; rotate: none; }
+  .ticket--wide, .ticket--long { grid-column: auto; }
   .ticket--wide .ticket__title { font-size: 1.6rem; }
+  .manual { grid-template-columns: 1fr; }
+  .manual__item:nth-child(n) { transform: none; }
   .postit { margin-top: 44px; }
+  .postit ul { grid-template-columns: 1fr; }
   .board { gap: 70px; }
   .form-sheet { padding: 70px 22px 30px; }
   .stamp { font-size: 1.6rem; right: 14px; top: 16px; bottom: auto; }
